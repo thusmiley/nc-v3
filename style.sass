@@ -1,0 +1,674 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=PT+Serif:wght@400;700&display=swap')
+$orange: #ff8c00
+$green: #7CE04E
+$darker-green: #298801
+$light-yellow: #FFDE00
+$yellow: #FFD100
+$blue: #40bfff
+$gray: #6a6a6a
+$almost-black: #252525
+$almost-white: #f1f1f1
+$peach: #FC7766
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+    scroll-behavior: smooth
+body
+    min-height: 100vh
+    font-family: 'PT Serif', serif
+    position: relative
+    color: $almost-black
+h1, h2, h3, h4, h5, h6
+    color: $almost-black
+    font-weight: 700
+    font-family: 'Montserrat', sans-serif
+h1
+    font-size: 56px
+    line-height: 56px
+h2
+    font-size: 50px
+    line-height: 60px
+h3
+    font-size: 26px
+    line-height: 36px    
+h4
+    font-size: 50px
+    line-height: 60px   
+p
+    font-size: 18px
+    line-height: 26px
+    font-weight: 400
+a
+    text-decoration: none
+    color: black
+    font-family: 'Montserrat', sans-serif
+img
+    max-width: 100%
+    display: block
+ul
+    list-style: none    
+.container
+    max-width: 1110px
+    margin: 0 auto
+.cta
+    font-family: 'Montserrat', sans-serif
+    padding: 14px 40px
+    font-weight: 700
+    color: $almost-black
+    border-radius: 5px
+// Header    
+header
+    position: absolute
+    top: 0
+    background-color: #40bfff
+    width: 100%    
+header .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding-top: 40px
+    padding-bottom: 40px
+.logo img
+    height: 42px
+nav a 
+    font-size: 18px
+    letter-spacing: 1px
+    font-weight: 500
+.underline:not(:last-child)
+    margin-right: 15px
+.underline
+    position: relative
+    width: fit-content
+    transition: 0.3s ease
+.underline:hover:after, .underline:active:after, .underline:focus:after
+    content: ""
+    position: absolute
+    width: 100%
+    display: block
+    height: 3px
+    background-color: $almost-black
+    bottom: -5px
+    left: 0
+    right: 0
+    margin-left: auto
+    margin-right: auto
+@media screen and (max-width: 1150px)  
+    .container
+        width: 690px
+    nav a 
+        font-size: 16px
+    h1
+        font-size: 37px
+        line-height: 40px
+    h2
+        font-size: 40px         
+        line-height: 40px
+    h3
+        font-size: 18px         
+        line-height: 22px
+    p
+        font-size: 16px
+        line-height: 23px        
+    .cta
+        padding: 10px 20px
+        font-size: 16px
+        line-height: 20px   
+@media screen and (max-width: 720px)  
+    .logo img
+        height: 30px
+    nav
+        display: none
+    .container
+        width: 343px
+    h1
+        font-size: 24px
+        line-height: 24px
+    h2
+        font-size: 26px         
+        line-height: 26px
+    h3
+        font-size: 18px         
+        line-height: 22px
+    p
+        font-size: 16px
+        line-height: 23px        
+    .cta
+        font-size: 14px
+        line-height: 20px     
+@media screen and (min-width: 320px) and (max-width: 480px) 
+    header .container
+        padding-top: 20px
+        padding-bottom: 20px
+// Hero banner       
+#hero
+    background-color: #40bfff
+#hero .container
+    padding-top: 120px 
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: center
+#hero h1 
+    text-transform: uppercase
+    letter-spacing: 1px
+    max-width: 20ch
+#hero p
+    margin: 20px 0 60px 0
+.hero-left
+    background-image: url('./assets/star.png')
+    background-repeat: no-repeat
+    background-position: top right
+    text-align: center
+    z-index: 1
+    padding-top: 70px
+.hero-right img
+    width: 60%
+    margin-left: auto
+    margin-right: auto
+@media screen and (max-width: 1150px)
+    #hero .container
+        padding-top: 110px 
+    #hero h1 
+        max-width: 22ch
+    #hero p
+        margin: 20px 0 50px 0
+    .hero-left
+        padding-top: 40px
+        background-size: 20px 30px
+@media screen and (max-width: 720px)  
+    #hero .container
+        padding-top: 70px
+    #hero p
+        margin: 15px auto
+    .hero-left
+        margin-bottom: 30px 
+        padding-top: 30px
+        background-size: 15px 20px
+    .hero-right img
+        width: 100%
+@media screen and (min-width: 320px) and (max-width: 480px) 
+    .container
+        width: auto
+        padding-left: calc(8px + 1.5625vw)
+        padding-right: calc(8px + 1.5625vw)
+    #hero p
+        max-width: 40ch  
+    .hero-left 
+// Services  
+#services 
+    padding: 80px 0 
+    background-color: $yellow
+    width: 100%
+#services .container
+    display: flex
+    align-items: center
+    justify-content: space-between
+.service-heading
+    width: 45%
+    margin-right: 80px
+.heading-under
+    position: relative
+    width: fit-content
+.heading-under h2:after
+    content: ""
+    position: absolute
+    width: 20%
+    display: block
+    height: 7px
+    background-color: $almost-black
+    bottom: -5px
+    left: 0
+.service-container
+    width: 55%
+.service:not(:last-child)
+    margin-bottom: 45px  
+.service-title
+    display: flex
+    align-items: center
+.service h3 
+    font-size: 40px
+    max-width: 10ch
+    text-transform: uppercase
+    margin-left: 20px
+.number
+    font-size: 77px
+    font-family: 'Montserrat', sans-serif
+    font-weight: 700
+.service p
+    margin-top: 10px 
+    line-height: 23px    
+@media screen and (max-width: 1150px)
+    #services 
+        padding: 50px 0 70px
+    #services .container
+        flex-direction: column
+    .service-heading
+        width: 100%
+        margin-right: 0
+        margin-bottom: 70px
+    .service-container
+        width: 100%
+    .service:not(:last-child)
+        margin-bottom: 50px  
+    .service h3, .number
+        line-height: 35px
+    .service p 
+        max-width: 70ch
+@media screen and (max-width: 720px)  
+    .service-heading
+        margin-bottom: 50px
+@media screen and (min-width: 320px) and (max-width: 720px) 
+    .service h3 
+        font-size: 20px
+        margin-left: 10px
+    .number
+        font-size: 40px
+    .service h3, .number
+        line-height: 20px
+// Why NC
+#whync
+    padding: 80px 0 
+    text-align: center
+    background-color: $peach
+.whync-heading p
+    margin-top: 20px    
+.whync-cards, .whync-card
+    display: flex
+.whync-cards
+    justify-content: space-between
+    margin-top: 120px
+.whync-card
+    text-align: center
+    flex-direction: column
+    align-items: center
+.whync-card:not(:last-child)
+    margin-right: 30px  
+.whync-card h3
+    margin: 48px 0 16px 0  
+    font-size: 18px
+    line-height: 26px
+@media screen and (max-width: 1150px)
+    #whync 
+        padding: 50px 0 70px 0
+    .whync-heading p
+        margin-top: 15px    
+    .whync-cards
+        margin-top: 50px
+        flex-direction: column
+    .whync-card:not(:last-child)
+        margin-right: 0
+        margin-bottom: 80px  
+    .whync-card img
+        width: 50px 
+    .whync-card h3
+        margin: 20px 0 10px 0  
+    .whync-card p 
+        max-width: 60ch
+@media screen and (max-width: 720px)
+    .whync-heading p
+        margin: 10px auto 0 auto
+        max-width: 40ch
+    .whync-card:not(:last-child)
+        margin-bottom: 50px  
+    .whync-card img
+        width: 40px 
+// Pricing    
+#pricing
+    padding: 80px 0
+    background-color: $blue
+.pricing-heading
+    text-align: center
+.pricing-heading p
+    margin-top: 20px    
+.pricing-cards
+    margin-top: 90px    
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    gap: 32px
+.pricing-card
+    background-color: white
+    padding: 22px 40px 100px
+    position: relative
+    border-radius: 5px
+.pricing-card p
+    font-size: 16px
+    line-height: 18px
+.pricing-card h3
+    font-size: 20px
+    font-weight: 500
+    line-height: 24px
+.pricing-card h4
+    font-size: 40px   
+    font-weight: 500
+    line-height: 40px
+.pricing-card .cta
+    position: absolute
+    bottom: 27px
+    border: none
+    left: 0
+    right: 0
+    width: 70%
+    margin-left: auto
+    margin-right: auto
+    text-align: center
+    font-size: 16px
+    line-height: 18px
+    text-transform: uppercase
+.pricing-card .cta:hover
+    opacity: 0.7
+.pricing-card-top
+    text-align: center
+.pricing-card-top h4
+    margin: 30px 0 10px 0
+.pricing-card-top p
+    margin-bottom: 30px
+.pricing-card-bottom li        
+    font-size: 16px
+    margin-top: 8px
+    display: flex
+.pricing-card-bottom span
+    color: lightgray
+    margin-right: 10px  
+.basic, .add-on
+    border-top: 8px solid $almost-black
+.basic .cta, .add-on .cta
+    background-color: $almost-white   
+.optimal
+    border-top: 8px solid $almost-black
+.optimal .cta
+    background-color: $yellow
+.add-on span
+    font-size: 14px  
+    line-height: 16px    
+@media screen and (max-width: 1150px)
+    #pricing 
+        padding: 50px 0 50px 0
+    .pricing-heading p
+        margin-top: 15px    
+    .pricing-cards
+        padding-top: 50px  
+        grid-template-columns: repeat(1, 1fr)
+        width: 60%
+        margin: 0 auto
+    .pricing-card
+        padding: 22px 40px 100px
+@media screen and (max-width: 720px)
+    .pricing-heading p
+        margin: 10px auto 0 auto    
+        max-width: 40ch
+    .pricing-cards
+        width: 100%
+    .pricing-cards .cta
+        font-size: 14px
+    .pricing-card
+        padding: 22px 30px 100px
+// Team
+#team
+    padding: 80px 0
+    width: 100%
+    background-color: $yellow
+#team .container
+    display: flex
+.team-heading
+    width: 45%
+    margin-right: 80px
+.team-heading p
+    margin-top: 17px
+.team-members
+    width: 55%
+    grid-template-columns: 1fr 1fr
+    display: grid
+    grid-template-areas: "griff ." "brenden thu"
+    gap: 30px
+    row-gap: 30px
+.griff
+    grid-area: griff
+.brenden
+    grid-area: brenden
+.thu
+    grid-area: thu
+.team-member img
+    border-radius: 5px
+.team-member h3
+    margin: 20px 0 5px 0      
+// Overlay
+.hover-container
+    position: relative
+.overlay
+    cursor: pointer
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    right: 0
+    height: 100%
+    opacity: 0
+    transition: all 0.3s ease-in-out
+    background-color: rgba(0, 0, 0, 0.7)
+    display: flex
+    justify-content: center
+    align-items: center
+    border-radius: 5px
+.socials-team
+    display: flex 
+.linkedin-white
+    margin-right: 36px
+.linkedin-white, .github-white
+    transition: all 0.3s ease-in-out
+    &:hover svg path
+        fill: $orange
+.hover-container:hover .overlay
+    opacity: 1    
+@media screen and (max-width: 1150px)
+    #team 
+        padding: 50px 0 40px 0
+    .team-heading
+        margin-right: 50px
+        width: 35%
+    .team-members
+        row-gap: 30px
+        width: 65%
+    .team-member h4
+        margin: 15px 0 0 0      
+        font-size: 24px
+        line-height: 30px   
+    .linkedin-white
+        margin-right: 20px
+@media screen and (max-width: 720px)
+    #team .container
+        flex-direction: column
+    .team-heading
+        width: 100%
+        margin-right: 0
+        margin-bottom: 40px
+        text-align: left
+    .team-heading h2 
+        width: 100%
+    .team-members
+        grid-template-columns: 1fr
+        grid-template-areas: "griff" "brenden" "thu"
+        width: auto
+        margin: auto
+    .team-member 
+        text-align: left 
+// Contact
+#contact 
+    background-color: $peach
+    padding: 80px 0 180px 0
+#contact h2 
+    margin-bottom: 20px
+    max-width: 8ch
+#contact .container
+    display: flex
+.contact-content
+    width: 45%    
+    margin-right: 80px
+.contact-info
+    margin-top: 50px
+.contact-info p:not(:last-child)
+    margin-bottom: 10px
+.contact-info span, .contact-info a 
+    font-weight: 700
+.contact-form
+    width: 55%
+input, textarea
+    -webkit-appearance: none
+    width: 100%
+    margin-bottom: 30px
+    padding: 15px 20px 
+    border-radius: 5px
+    background-color: white 
+    font-family: 'PT Serif', serif
+    color: $almost-black
+    font-size: 18px
+    line-height: 28px
+    border: none
+textarea:focus, input:focus
+    -webkit-appearance: none
+    color: $almost-black
+    outline: none
+    border-radius: 5px
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+    -webkit-appearance: none
+    -webkit-box-shadow: 0 0 0 30px white inset !important
+    -webkit-text-fill-color: $almost-black !important    
+    font-family: 'PT Serif', serif!important
+    background-clip: content-box !important
+label
+    margin-bottom: 10px
+    display: inline-block
+    font-weight: 700
+    color: $almost-black
+    font-size: 18px
+label span
+    color: $yellow
+.contact-form .cta
+    -webkit-appearance: none
+    cursor: pointer
+    border-radius: 5px
+    font-family: 'PT Serif', serif
+    padding: 14px 40px
+    border: none   
+    font-size: 18px
+    line-height: 26px
+    font-weight: 700
+    background-color: white
+    color: black
+    transition: all 0.3s ease-in-out
+    background-color: $yellow
+    font-family: 'Montserrat', sans-serif
+    font-size: 16px
+    &:hover
+        opacity: 0.7
+@media screen and (max-width: 1150px)
+    #contact
+        padding: 50px 0 120px 0
+    #contact h3
+        margin-bottom: 15px 
+    input, textarea, label
+        font-size: 16px
+        line-height: 24px
+    .contact-form .cta
+        font-size: 14px
+        line-height: 20px
+@media screen and (max-width: 720px)  
+    #contact
+        padding: 50px 0 180px 0
+    #contact .container
+        flex-direction: column
+    .contact-content, .contact-form
+        width: 100%
+    #contact h2 
+        max-width: 100%
+    .contact-content
+        margin-right: 0
+    .contact-info
+        margin-top: 30px
+        margin-bottom: 50px
+    input, textarea
+        margin-bottom: 20px
+// Footer    
+footer
+    height: 128px
+    position: absolute
+    bottom: 0
+    width: 100%
+    background-color: white
+footer .container, .socials
+    display: flex
+    justify-content: space-between
+footer .container
+    align-items: center
+    margin-top: 50px
+footer a, footer p
+    font-size: 16px
+footer a
+    font-family: 'PT Serif', serif
+    text-decoration: underline
+footer a:hover 
+    color: $orange
+.socials
+    width: 90px
+.socials a:hover svg path
+    fill: $orange
+    transition: all 0.3s ease-in-out
+
+@media screen and (max-width: 1150px)
+    footer
+        height: 80px
+    footer .container
+        margin-top: 26px
+    .socials img
+        width: 32px
+@media screen and (max-width: 720px)  
+    footer
+        height: 150px
+        .container
+            flex-direction: column-reverse
+            text-align: center
+            margin-top: 40px
+        .socials
+            margin-bottom: 20px            
+// THANK YOU PAGE
+#thank-you 
+    padding-top: 120px
+    text-align: center
+#thank-you h1
+    margin-top: 120px
+#thank-you p
+    margin: 25px auto 50px auto
+    width: 50ch
+#thank-you .cta
+    background-color: $yellow
+#thank-you .cta:hover
+    opacity: 0.7
+@media screen and (max-width: 720px)  
+    #thank-you h1
+        font-size: 30px
+    #thank-you p
+        margin: 10px auto 40px auto
+        width: 38ch
+// Styling scrollable elements
+.js-scroll 
+    opacity: 0
+    transition: opacity 500ms
+.js-scroll.scrolled 
+    opacity: 1
+.scrolled.fade-in-bottom 
+    animation: fade-in-bottom 1s ease-in-out both
+
+@keyframes fade-in-bottom 
+  0% 
+    -webkit-transform: translateY(50px)
+    transform: translateY(50px)
+    opacity: 0
+  100% 
+    -webkit-transform: translateY(0)
+    transform: translateY(0)
+    opacity: 1
+
+        
