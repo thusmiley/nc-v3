@@ -16,25 +16,3 @@ function closeNav() {
   closeMenu.classList.remove("active");
   nav.classList.remove("active");
 }
-// Block background color scrolling animation
-$(window)
-  .scroll(function () {
-    let $window = $(window),
-      $body = $("body"),
-      $block = $(".block");
-    let scroll = $window.scrollTop() + $window.height() / 3;
-    $block.each(function () {
-      let $this = $(this);
-      if (
-        $this.position().top <= scroll &&
-        $this.position().top + $this.height() > scroll
-      ) {
-        $body.removeClass(function (index, css) {
-          return (css.match(/(^|\s)color-\S+/g) || []).join(" ");
-        });
-
-        $body.addClass("color-" + $(this).data("color"));
-      }
-    });
-  })
-  .scroll();
