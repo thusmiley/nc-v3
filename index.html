@@ -42,7 +42,7 @@
   </head>
   <body>
     <!-- Header -->
-    <header>
+    <header >
       <div class="container">
         <a href="#" class="logo"
           ><img src="./assets/logo.svg" alt="naughty cat logo"
@@ -71,20 +71,20 @@
             fill-rule="evenodd"
           />
         </svg>
+        <div class="overlay"></div>
         <nav id="header-nav" onclick="closeNav()">
           <span class="underline"><a href="#services">SERVICES</a></span>
           <span class="underline"><a href="#pricing">PRICING</a></span>
           <span class="underline"><a href="#team">ABOUT</a></span>
           <span class="underline"> <a href="#contact">CONTACT</a></span>
         </nav>
-        <div class="overlay"></div>
       </div>
     </header>
 
     <!-- Main -->
     <main>
       <!-- Hero -->
-      <section id="hero">
+      <section id="hero" >
         <div class="container">
           <div class="hero-left">
             <h1>Add <span>A Touch Of Magic</span> To Your Website</h1>
@@ -104,9 +104,9 @@
       </section>
 
       <!-- Services -->
-      <section id="services">
+      <section id="services" class="block" data-color="yellow">
         <div class="container">
-          <div class="service-heading js-scroll fade-in-bottom">
+          <div class="service-heading">
             <div class="heading-under"><h2>Our Services</h2></div>
 
             <!-- <p>One stop shopping for all your website creation needs.</p> -->
@@ -159,9 +159,9 @@
       </section>
 
       <!-- Why Naughty Cat -->
-      <section id="whync">
+      <section id="whync" class="block" data-color="peach">
         <div class="container">
-          <div class="whync-heading js-scroll fade-in-bottom">
+          <div class="whync-heading">
             <h2>Why Naughty Cat?</h2>
             <p>
               We’re a dedicated local team ready to bring our passion to your
@@ -207,9 +207,9 @@
       </section>
 
       <!-- Pricing -->
-      <section id="pricing">
+      <section id="pricing" class="block" data-color="blue">
         <div class="container">
-          <div class="pricing-heading js-scroll fade-in-bottom">
+          <div class="pricing-heading">
             <h2>Our pricing</h2>
             <p>
               Pick and choose what you value most and we’ll put together all the
@@ -322,9 +322,9 @@
       </section>
 
       <!-- Our team -->
-      <section id="team">
+      <section id="team" class="block" data-color="yellow">
         <div class="container">
-          <div class="team-heading js-scroll fade-in-bottom">
+          <div class="team-heading">
             <div class="heading-under"><h2>Our team</h2></div>
 
             <p>Meet the cats behind the magic.</p>
@@ -494,15 +494,24 @@
       </section>
 
       <!-- Contact -->
-      <section id="contact">
+      <section id="contact" class="block" data-color="peach">
         <div class="container">
-          <div class="contact-content js-scroll fade-in-bottom">
+          <div class="contact-content">
             <div class="heading-under"><h2>Connect with us</h2></div>
             <p>You’ve come this far. Why not say hello?</p>
             <div class="contact-info">
-              <p><img src="./assets/noun-location-5565753.svg" alt=""> Madision, WI</p>
-              <p><img src="./assets/noun-email-5565746.svg" alt=""> support[at]naughty-cat.com</p>
-              <p><img src="./assets/noun-phone-5565754.svg" alt=""> <a href="tel:+17154404722">(715) 440-4722</a></p>
+              <p>
+                <img src="./assets/noun-location-5565753.svg" alt="" />
+                Madision, WI
+              </p>
+              <p>
+                <img src="./assets/noun-email-5565746.svg" alt="" />
+                support[at]naughty-cat.com
+              </p>
+              <p>
+                <img src="./assets/noun-phone-5565754.svg" alt="" />
+                <a href="tel:+17154404722">(715) 440-4722</a>
+              </p>
             </div>
           </div>
           <div class="contact-form">
@@ -597,6 +606,7 @@
         </div>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
     <script src="./script.js"></script>
   </body>
 </html>
