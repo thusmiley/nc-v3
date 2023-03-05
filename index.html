@@ -47,12 +47,37 @@
         <a href="#" class="logo"
           ><img src="./assets/logo.svg" alt="naughty cat logo"
         /></a>
-        <nav>
+        <svg
+          width="24"
+          class="open-menu"
+          onclick="openNav()"
+          height="16"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <g fill="#000" fill-rule="evenodd">
+            <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z" />
+          </g>
+        </svg>
+        <svg
+          class="close-menu"
+          onclick="closeNav()"
+          width="20"
+          height="20"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
+            fill="#000"
+            fill-rule="evenodd"
+          />
+        </svg>
+        <nav id="header-nav" onclick="closeNav()">
           <span class="underline"><a href="#services">SERVICES</a></span>
           <span class="underline"><a href="#pricing">PRICING</a></span>
           <span class="underline"><a href="#team">ABOUT</a></span>
           <span class="underline"> <a href="#contact">CONTACT</a></span>
         </nav>
+        <div class="overlay"></div>
       </div>
     </header>
 
@@ -315,7 +340,7 @@
                   alt="griff the naughty cat"
                 />
 
-                <div class="overlay">
+                <div class="team-overlay">
                   <div class="socials-team">
                     <a
                       target="_blank"
@@ -369,7 +394,7 @@
                   alt="brenden gerber"
                 />
 
-                <div class="overlay">
+                <div class="team-overlay">
                   <div class="socials-team">
                     <a
                       target="_blank"
@@ -420,7 +445,7 @@
               <div class="hover-container">
                 <img class="team-img" src="./assets/Thu.webp" alt="thu dang" />
 
-                <div class="overlay">
+                <div class="team-overlay">
                   <div class="socials-team">
                     <a
                       target="_blank"
@@ -473,12 +498,11 @@
         <div class="container">
           <div class="contact-content js-scroll fade-in-bottom">
             <div class="heading-under"><h2>Connect with us</h2></div>
-
             <p>You’ve come this far. Why not say hello?</p>
             <div class="contact-info">
-              <p>Location: <span>Madision, WI</span></p>
-              <p>Email: <span>support[at]naughty-cat.com</span></p>
-              <p>Phone: <a href="tel:+17154404722">(715) 440-4722</a></p>
+              <p><img src="./assets/noun-location-5565753.svg" alt=""> Madision, WI</p>
+              <p><img src="./assets/noun-email-5565746.svg" alt=""> support[at]naughty-cat.com</p>
+              <p><img src="./assets/noun-phone-5565754.svg" alt=""> <a href="tel:+17154404722">(715) 440-4722</a></p>
             </div>
           </div>
           <div class="contact-form">

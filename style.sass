@@ -69,12 +69,17 @@ header .container
     align-items: center
     padding-top: 40px
     padding-bottom: 40px
+.overlay
+    z-index: -1
 .logo img
     height: 42px
 nav a 
     font-size: 18px
     letter-spacing: 1px
     font-weight: 500
+.close-menu, .open-menu
+    cursor: pointer
+    display: none
 .underline:not(:last-child)
     margin-right: 15px
 .underline
@@ -115,15 +120,48 @@ nav a
         font-size: 16px
         line-height: 20px   
 @media screen and (max-width: 720px)  
-    .logo img
-        height: 30px
-    nav
-        display: none
     .container
         width: 343px
+    header .container
+        padding-top: 30px
+        padding-bottom: 30px
+    .logo img
+        height: 35px
+    nav
+        display: none
+    .open-menu
+        display: block
+        z-index: 3
+    .open-menu.active
+        display: none
+    .close-menu, #header-nav
+        display: none
+        z-index: 3 !important
+    #header-nav
+        position: absolute 
+    .close-menu
+        right: 0
+    .overlay
+        height: 0
+        width: 100%
+        position: fixed
+        z-index: 2
+        left: 0
+        top: 0
+        background-color: $blue
+        overflow-x: hidden
+        transition: 0.5s
+    #header-nav.active, .close-menu.active
+        display: block
+        z-index: 2
+    #header-nav.active
+        margin-top: 50vh
+        display: flex
+        flex-direction: column
+        font-size: 40px
     h1
-        font-size: 24px
-        line-height: 24px
+        font-size: 30px
+        line-height: 32px
     h2
         font-size: 26px         
         line-height: 26px
@@ -178,7 +216,7 @@ nav a
         background-size: 20px 30px
 @media screen and (max-width: 720px)  
     #hero .container
-        padding-top: 70px
+        padding-top: 90px
     #hero p
         margin: 15px auto
     .hero-left
@@ -195,6 +233,8 @@ nav a
     #hero p
         max-width: 40ch  
     .hero-left 
+        padding-top: 25px
+        background-size: 18px 24px
 // Services  
 #services 
     padding: 80px 0 
@@ -257,15 +297,15 @@ nav a
         max-width: 70ch
 @media screen and (max-width: 720px)  
     .service-heading
-        margin-bottom: 50px
+        margin-bottom: 80px
 @media screen and (min-width: 320px) and (max-width: 720px) 
     .service h3 
         font-size: 20px
+        line-height: 20px
         margin-left: 10px
     .number
-        font-size: 40px
-    .service h3, .number
-        line-height: 20px
+        font-size: 50px
+        line-height: 50px
 // Why NC
 #whync
     padding: 80px 0 
@@ -311,8 +351,6 @@ nav a
         max-width: 40ch
     .whync-card:not(:last-child)
         margin-bottom: 50px  
-    .whync-card img
-        width: 40px 
 // Pricing    
 #pricing
     padding: 80px 0
@@ -372,12 +410,10 @@ nav a
     margin-right: 10px  
 .basic, .add-on
     border-top: 8px solid $almost-black
-.basic .cta, .add-on .cta
-    background-color: $almost-white   
+.basic .cta, .add-on .cta, .optimal .cta
+    background-color: $yellow
 .optimal
     border-top: 8px solid $almost-black
-.optimal .cta
-    background-color: $yellow
 .add-on span
     font-size: 14px  
     line-height: 16px    
@@ -435,7 +471,7 @@ nav a
 // Overlay
 .hover-container
     position: relative
-.overlay
+.team-overlay
     cursor: pointer
     position: absolute
     top: 0
@@ -458,7 +494,7 @@ nav a
     transition: all 0.3s ease-in-out
     &:hover svg path
         fill: $orange
-.hover-container:hover .overlay
+.hover-container:hover .team-overlay
     opacity: 1    
 @media screen and (max-width: 1150px)
     #team 
@@ -508,8 +544,12 @@ nav a
     margin-top: 50px
 .contact-info p:not(:last-child)
     margin-bottom: 10px
-.contact-info span, .contact-info a 
-    font-weight: 700
+.contact-info img
+    max-width: 20px
+    margin-right: 10px
+.contact-info p
+    display: flex
+     align-items: center
 .contact-form
     width: 55%
 input, textarea
@@ -551,7 +591,7 @@ label span
     cursor: pointer
     border-radius: 5px
     font-family: 'PT Serif', serif
-    padding: 14px 40px
+    padding: 10px 20px
     border: none   
     font-size: 18px
     line-height: 26px
